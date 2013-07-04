@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Emperor"]
   spec.email         = ["valentine.emperor@gmail.com"]
   spec.description   = "A tool to eval syntax-depended problems from rubeque.com"
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = "Simple rubeque evaluator"
   spec.homepage      = ""
   spec.license       = "MIT"
 
