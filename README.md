@@ -1,6 +1,7 @@
-# RubequeParser
+# Rubeque Parser
 
-TODO: Write a gem description
+Rubeque parser could be used to go through rubeque.com test locally  
+It will help you to write syntax-depended tests
 
 ## Installation
 
@@ -18,12 +19,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+To use this gem, you need to add  
+`require 'rubeque_parser'`  
+to your file, and then  
+`RubequeParser::eval_string(str_one, str_two)`  
+which will substitute all '___' occurances in `str_one` with `str_two` and then return the evaluation of resulting string
