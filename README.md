@@ -1,9 +1,15 @@
 # Rubeque Parser
 
 Rubeque parser could be used to go through rubeque.com test locally  
-It will help you to write syntax-depended tests
+It will help you to write syntax-dependent tests
 
 ## Installation
+
+To install the gem you should do this:
+
+    $ git clone https://github.com/vemperor/rubeque_parser.git
+    $ cd rubeque_parser
+    $ rake install
 
 Add this line to your application's Gemfile:
 
@@ -13,14 +19,18 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install rubeque_parser
-
 ## Usage
 
-To use this gem, you need to add  
-`require 'rubeque_parser'`  
-to your file, and then  
-`RubequeParser::eval_string(str_one, str_two)`  
+To use this gem, you need to add
+
+    require 'rubeque_parser'
+
+to your file, and then
+
+    RubequeParser::eval_string(str_one, str_two)
+
 which will substitute all '___' occurances in `str_one` with `str_two` and then return the evaluation of resulting string
+
+Example:
+
+    assert_equal RubequeParser::eval_string('___{1 2 3 4}', '%w'), ["1", "2", "3", "4"]
