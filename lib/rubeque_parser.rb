@@ -1,7 +1,7 @@
 require "rubeque_parser/version"
 
 module RubequeParser
-  def RubequeParser.eval_string(test_string, sol_string)
+  def eval_string(test_string, sol_string)
     res_string = test_string.gsub '___', sol_string
     return eval res_string
   end

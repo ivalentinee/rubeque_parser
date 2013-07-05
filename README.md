@@ -25,12 +25,16 @@ To use this gem, you need to add
 
     require 'rubeque_parser'
 
-to your file, and then
+to your file, then include module RubequeParser to your class
 
-    RubequeParser::eval_string(str_one, str_two)
+    include RubequeParser
+
+and then
+
+    eval_string(str_one, str_two)
 
 which will substitute all '___' occurances in `str_one` with `str_two` and then return the evaluation of resulting string
 
 Example:
 
-    assert_equal RubequeParser::eval_string('___{1 2 3 4}', '%w'), ["1", "2", "3", "4"]
+    assert_equal eval_string('___{1 2 3 4}', '%w'), ["1", "2", "3", "4"]
